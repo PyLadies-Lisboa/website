@@ -10,7 +10,7 @@ precisamos que criem um repositório: só o DNS e, opcionalmente, o submódulo e
 Antes de abrir o issue:
 
 1. Registar o capítulo no [Chapter Directory](https://docs.google.com/forms/d/e/1FAIpQLSf43R4FbiIE4z76k5z42UU4HKMKJnTr2ldh4KecE4WRTJZLUw/viewform).
-2. Completar os *handles* do GitHub das outras coordenadoras.
+2. ~~Completar os handles do GitHub~~ (feito).
 
 ---
 
@@ -23,7 +23,7 @@ We're the organizers of **PyLadies Lisboa** (Lisbon, Portugal) and we'd like to 
 
 - **Chapter name:** PyLadies Lisboa
 - **Registered in the chapter directory:** yes
-- **Organizers' GitHub handles:** @084intheImpala, @TODO, @TODO, @TODO
+- **Organizers' GitHub handles:** @084intheImpala (Ana Sofia Sousa), @amsptm-coder (Ana Machado), @Artemis-star-5 (Diana Geirinhas), @TCCutelo (Teresa Cutelo)
 - **Chapter email:** lisboa@pyladies.com
 - **Requested domain:** `lisboa.pyladies.com`
 - **Website repository:** https://github.com/PyLadies-Lisboa/website

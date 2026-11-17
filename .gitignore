@@ -4,3 +4,8 @@ desktop.ini
 *.tmp
 .venv/
 __pycache__/
+
+# Notas locais do Claude Code
+CLAUDE.md
+CLAUDE.local.md
+.claude/
