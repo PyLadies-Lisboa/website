@@ -99,7 +99,7 @@ h3, .h3 { font: 700 1.2rem/1.3 var(--font-body); color: var(--pyl-navy); margin-
 .lead-sm { font-size: 1.05rem; color: #46423f; }
 .narrow { max-width: 720px; }
 .mark {
-  background: linear-gradient(transparent 60%, var(--pyl-yellow) 60%, var(--pyl-yellow) 92%, transparent 92%);
+  background: linear-gradient(transparent 68%, var(--pyl-yellow) 68%, var(--pyl-yellow) 100%);
   padding: 0 .08em; font-weight: 700; color: var(--pyl-navy);
 }
 
