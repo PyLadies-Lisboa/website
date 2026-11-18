@@ -250,7 +250,8 @@ h3, .h3 { font: 700 1.2rem/1.3 var(--font-body); color: var(--pyl-navy); margin-
 .skyline { width: 100%; opacity: .95; }
 .ground { height: 6px; background: var(--pyl-yellow); border-radius: 3px; margin-top: -2px; }
 .footer-grid { display: grid; gap: 32px; margin-top: 40px; }
-@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+@media (min-width: 720px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1.2fr 1fr; } }
 .footer-grid img { width: 140px; }
 .footer-note { margin-top: 14px; max-width: 300px; }
 .footer-title {
@@ -258,6 +259,9 @@ h3, .h3 { font: 700 1.2rem/1.3 var(--font-body); color: var(--pyl-navy); margin-
   color: var(--pyl-yellow); margin-bottom: 14px;
 }
 .links li + li { margin-top: 8px; }
+.footer-note + .btn-footer { margin-top: 16px; }
+.site-footer .btn-footer { background: var(--pyl-yellow); color: var(--pyl-navy); border-color: var(--pyl-yellow); padding: 12px 22px; }
+.site-footer .btn-footer:hover { color: var(--pyl-navy); transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--pyl-white); }
 .copyright { margin-top: 44px; font-size: .875rem; color: #9fb8d6; }
 
 /* Equipa — fotos quadradas */
