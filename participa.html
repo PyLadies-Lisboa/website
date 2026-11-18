@@ -70,6 +70,19 @@
       </div>
     </section>
 
+    <!-- ───────────── Novidades por email (formulário Tally) ───────────── -->
+    <section id="novidades" class="section section-ice">
+      <div class="wrap">
+        <span class="eyebrow">Novidades</span>
+        <h2 class="display">Receber as novidades <em>por email</em></h2>
+        <div class="signup">
+          <iframe data-tally-src="https://tally.so/embed/e5rz8J?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+                  loading="lazy" width="100%" height="720" title="Receber as novidades da PyLadies Lisboa"></iframe>
+          <noscript><p><a href="https://tally.so/r/e5rz8J">Abrir o formulário de subscrição</a></p></noscript>
+        </div>
+      </div>
+    </section>
+
     <!-- ───────────── Código de conduta ───────────── -->
     <section class="section">
       <div class="wrap conduct">
@@ -101,6 +114,7 @@
           <h2 class="footer-title">Contactos</h2>
           <ul class="links">
             <li><a href="mailto:lisboa@pyladies.com" title="lisboa@pyladies.com">Email</a></li>
+            <li><a href="https://discord.gg/uJXCDMvXN">Discord</a></li>
             <li><a href="https://www.instagram.com/pyladies.lisboa/">Instagram</a></li>
             <li><a href="https://www.linkedin.com/company/pyladies-lisboa">LinkedIn</a></li>
             <li><a href="https://github.com/PyLadies-Lisboa">GitHub</a></li>
@@ -119,6 +133,18 @@
     </div>
   </footer>
 
+  <!-- Formulário Tally: o embed.js ajusta a altura; sem ele, o iframe carrega na mesma -->
+  <script>
+    (function () {
+      var load = function () {
+        if (window.Tally) return window.Tally.loadEmbeds();
+        document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (f) { f.src = f.dataset.tallySrc; });
+      };
+      var s = document.createElement('script');
+      s.src = 'https://tally.so/widgets/embed.js'; s.async = true; s.onload = load; s.onerror = load;
+      document.body.appendChild(s);
+    })();
+  </script>
   <script>
     try { document.getElementById("ano").textContent = new Date().getFullYear(); } catch (e) {}
   </script>
