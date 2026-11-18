@@ -11,6 +11,7 @@ cp "$KIT"/logo/{pyladies-lisboa-sticker,wordmark,wordmark-on-dark,mascot,skyline
 cp "$KIT"/logo/pyladies-lisboa-sticker-512.png images/
 cp "$KIT"/patterns/azulejo-tiles.svg images/
 cp "$KIT"/social/avatar-1080.png images/og-image.png
+cp "$KIT"/social/avatar-400.png images/   # logótipo redondo dos formulários Tally
 cp "$KIT"/social/favicon.ico .
 cp "$KIT"/social/favicon-{32,180}.png "$KIT"/social/favicon.svg images/
 cp -r "$KIT"/brand/fonts/. fonts/
