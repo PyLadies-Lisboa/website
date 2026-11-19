@@ -15,7 +15,8 @@ E abre <http://localhost:8000>.
 ## Estrutura
 
 ```
-index.html              a página (tudo em pt-PT)
+*.html                  as páginas em pt-PT
+en/*.html               as mesmas páginas em inglês (manter as duas versões a par)
 style.css               estilos; cores e fontes do kit de marca
 images/                 logótipo, mascote, skyline, azulejos, favicons, og-image
 fonts/                  Libre Baskerville, DM Sans, JetBrains Mono (SIL OFL)

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events · PyLadies Lisboa</title>
+  <meta name="description" content="PyLadies Lisboa: a community for women and non-binary people who want to learn, use and lead in Python. Meetups, workshops and talks in Lisbon.">
+  <meta name="theme-color" content="#00316b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Events · PyLadies Lisboa">
+  <meta property="og:description" content="A community for women and non-binary people who want to learn, use and lead in Python.">
+  <meta property="og:url" content="https://lisboa.pyladies.com/en/eventos.html">
+  <meta property="og:image" content="https://lisboa.pyladies.com/images/og-image.png">
+
+  <link rel="alternate" hreflang="pt-PT" href="https://lisboa.pyladies.com/eventos.html">
+  <link rel="alternate" hreflang="en" href="https://lisboa.pyladies.com/en/eventos.html">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../images/favicon-180.png">
+  <link rel="preload" href="../fonts/libre-baskerville/LibreBaskerville-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Skip to content</a>
+
+  <!-- Uma única fila de azulejos, como nas publicações. -->
+  <div class="tile-band" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand"><img src="../images/wordmark.svg" alt="PyLadies Lisboa" width="132" height="58"></a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="eventos.html" aria-current="page">Events</a></li>
+          <li><a href="participa.html">Get involved</a></li>
+          <li><a href="equipa.html">Team</a></li>
+          <li><a href="contactos.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="../eventos.html" hreflang="pt-PT" lang="pt-PT" title="Versão em português">PT</a>
+        <span aria-current="true">EN</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ───────────── Destaque + calendário ───────────── -->
+    <section class="section section-ice">
+      <div class="wrap encontros">
+        <div>
+          <span class="eyebrow">Events</span>
+          <h1 class="display page-title">Upcoming <em>events</em></h1>
+          <p class="lead">
+            Meetups, workshops and talks in Lisbon, free and open to every level.
+            To never miss one, subscribe to the <a href="participa.html#novidades">newsletter</a>.
+          </p>
+          <ul class="jump" aria-label="Event types">
+            <li><a href="#encontros">Meetups</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#palestras">Talks</a></li>
+          </ul>
+        </div>
+        <!-- Preenchido por calendario.js a partir dos eventos desta página. Sem JS, fica escondido. -->
+        <div class="cal" id="calendario" hidden></div>
+      </div>
+    </section>
+
+    <!--
+      NOVO EVENTO: na secção do tipo certo (encontros / workshops / palestras), trocar o
+      <p class="events-empty"> por uma lista e um <li> por evento. O calendário lê a data do
+      <time datetime> e a cor do tipo a partir da secção; não é preciso mais nada.
+
+      <ol class="events">
+        <li>
+          <article class="event">
+            <p class="event-date"><strong><time datetime="2026-12-10T18:30">Thursday 10 December</time></strong> · 6.30 pm</p>
+            <h3>Event title</h3>
+            <p>Short description.</p>
+            <p class="event-meta"><strong>Lisbon</strong> · venue · <strong>Free</strong></p>
+            <a class="btn btn-primary" href="LINK-DE-INSCRICAO">Register</a>
+          </article>
+        </li>
+      </ol>
+    -->
+
+    <!-- ───────────── Encontros ───────────── -->
+    <section id="encontros" class="section formato">
+      <div class="wrap formato-grid">
+        <div class="formato-intro">
+          <h2 class="display">Meetups</h2>
+          <p>Relaxed evenings to meet people, bring your questions and code side by side. No sign-up or experience needed.</p>
+        </div>
+        <div>
+          <p class="events-empty"><strong>Dates to be announced.</strong> To hear first, subscribe to the <a href="participa.html#novidades">newsletter</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Workshops ───────────── -->
+    <section id="workshops" class="section section-ice formato">
+      <div class="wrap formato-grid">
+        <div class="formato-intro">
+          <h2 class="display">Workshops</h2>
+          <p>Hands-on sessions, from your first script to data analysis, with mentors on hand to help. Just bring your laptop.</p>
+        </div>
+        <div>
+          <p class="events-empty"><strong>Dates to be announced.</strong> To hear first, subscribe to the <a href="participa.html#novidades">newsletter</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Palestras ───────────── -->
+    <section id="palestras" class="section formato">
+      <div class="wrap formato-grid">
+        <div class="formato-intro">
+          <h2 class="display">Talks</h2>
+          <p>A stage to share what you know, whether it's your first talk or your twentieth.</p>
+          <p><a class="btn btn-ghost" href="participa.html#dar-palestra">Give a talk</a></p>
+        </div>
+        <div>
+          <p class="events-empty"><strong>Dates to be announced.</strong> To hear first, subscribe to the <a href="participa.html#novidades">newsletter</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────────── Contactos / rodapé ───────────── -->
+  <footer id="contactos" class="site-footer">
+    <div class="wrap">
+      <img class="skyline" src="../images/skyline-on-dark.svg" alt="" width="1100" height="249">
+      <div class="ground" aria-hidden="true"></div>
+
+      <div class="footer-grid">
+        <div>
+          <img src="../images/wordmark-on-dark.svg" alt="PyLadies Lisboa" width="160" height="70">
+          <p class="footer-note">A Python community for women and non-binary people.</p>
+        </div>
+        <div>
+          <h2 class="footer-title">Contact</h2>
+          <ul class="links">
+            <li><a href="mailto:lisboa@pyladies.com" title="lisboa@pyladies.com">Email</a></li>
+            <li><a href="https://discord.gg/uJXCDMvXN">Discord</a></li>
+            <li><a href="https://www.instagram.com/pyladies.lisboa/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/pyladies-lisboa">LinkedIn</a></li>
+            <li><a href="https://github.com/PyLadies-Lisboa">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Newsletter</h2>
+          <p class="footer-note">Get upcoming meetups and events by email.</p>
+          <a class="btn btn-footer" href="participa.html#novidades">Subscribe to the newsletter</a>
+        </div>
+        <div>
+          <h2 class="footer-title">PyLadies</h2>
+          <ul class="links">
+            <li><a href="https://www.pyladies.com/">pyladies.com</a></li>
+            <li><a href="https://www.pyladies.com/CodeOfConduct/">Code of conduct</a></li>
+            <li><a href="https://slackin.pyladies.com/">PyLadies Slack</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© <span id="ano">2026</span> PyLadies Lisboa</p>
+    </div>
+  </footer>
+
+  <script src="../calendario.js" defer></script>
+  <script>
+    try { document.getElementById("ano").textContent = new Date().getFullYear(); } catch (e) {}
+  </script>
+</body>
+</html>

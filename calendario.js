@@ -5,11 +5,28 @@
   var box = document.getElementById("calendario");
   if (!box) return;
 
-  var TIPOS = { encontros: "Encontros", workshops: "Workshops", palestras: "Palestras" };
-  var DIAS = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
-  var DIAS_LONGOS = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"];
-  var MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
-               "setembro", "outubro", "novembro", "dezembro"];
+  // Textos em pt-PT ou em inglês, conforme o <html lang> (as páginas em inglês estão em en/).
+  var EN = /^en/.test(document.documentElement.lang);
+  var T = EN ? {
+    tipos: { encontros: "Meetups", workshops: "Workshops", palestras: "Talks" },
+    dias: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    diasLongos: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    meses: ["January", "February", "March", "April", "May", "June", "July", "August",
+            "September", "October", "November", "December"],
+    anterior: "Previous month", seguinte: "Next month", evento: "Event",
+    vazio: "No events scheduled this month yet.",
+    rotulo: function (dia, mes) { return dia + " " + mes; }
+  } : {
+    tipos: { encontros: "Encontros", workshops: "Workshops", palestras: "Palestras" },
+    dias: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"],
+    diasLongos: ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"],
+    meses: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
+            "setembro", "outubro", "novembro", "dezembro"],
+    anterior: "Mês anterior", seguinte: "Mês seguinte", evento: "Evento",
+    vazio: T.vazio,
+    rotulo: function (dia, mes) { return dia + " de " + mes; }
+  };
+  var TIPOS = T.tipos, DIAS = T.dias, DIAS_LONGOS = T.diasLongos, MESES = T.meses;
 
   function chave(d) { return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); }
 
@@ -25,7 +42,7 @@
     if (!ev.id) ev.id = "evento-" + (++n);
     var h = ev.querySelector("h3");
     (eventos[chave(d)] = eventos[chave(d)] || []).push({
-      id: ev.id, tipo: sec.id, titulo: h ? h.textContent.trim() : TIPOS[sec.id] || "Evento"
+      id: ev.id, tipo: sec.id, titulo: h ? h.textContent.trim() : TIPOS[sec.id] || T.evento
     });
   });
 
@@ -42,8 +59,8 @@
   function desenhar() {
     box.innerHTML = "";
     var topo = el("div", "cal-head");
-    var ant = el("button", "cal-nav", "‹"); ant.type = "button"; ant.setAttribute("aria-label", "Mês anterior");
-    var seg = el("button", "cal-nav", "›"); seg.type = "button"; seg.setAttribute("aria-label", "Mês seguinte");
+    var ant = el("button", "cal-nav", "‹"); ant.type = "button"; ant.setAttribute("aria-label", T.anterior);
+    var seg = el("button", "cal-nav", "›"); seg.type = "button"; seg.setAttribute("aria-label", T.seguinte);
     var titulo = el("h2", "cal-title", MESES[mes].charAt(0).toUpperCase() + MESES[mes].slice(1) + " " + ano);
     titulo.setAttribute("aria-live", "polite");
     ant.onclick = function () { mes--; if (mes < 0) { mes = 11; ano--; } desenhar(); };
@@ -77,7 +94,7 @@
           noMes += evs.length;
           var a = el("a", "cal-dia cal-" + evs[0].tipo, String(dia));
           a.href = "#" + evs[0].id;
-          a.setAttribute("aria-label", dia + " de " + MESES[mes] + ": " +
+          a.setAttribute("aria-label", T.rotulo(dia, MESES[mes]) + ": " +
             evs.map(function (e) { return e.titulo; }).join("; "));
           a.title = evs.map(function (e) { return e.titulo; }).join(" · ");
           td.append(a);
@@ -92,7 +109,7 @@
     tab.append(tbody);
     box.append(tab);
 
-    box.append(el("p", "cal-note", noMes ? "" : "Ainda sem eventos marcados neste mês."));
+    box.append(el("p", "cal-note", noMes ? "" : T.vazio));
     var leg = el("ul", "cal-legend");
     Object.keys(TIPOS).forEach(function (k) { leg.append(el("li", "cal-" + k, TIPOS[k])); });
     box.append(leg);
